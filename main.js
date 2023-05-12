@@ -3,7 +3,7 @@ const desktopMenu = document.querySelector('.desktop-menu');
 const menuMobileIcon = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const menuCarritoIcon = document.querySelector('.navbar-shopping-cart');
-const menuCarrito = document.querySelector('.product-detail');
+const menuCarrito = document.querySelector('.product-card-detail');
 const cardsContainer = document.querySelector('.cards-container');
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
@@ -48,6 +48,12 @@ productList.push({
     'https://images.pexels.com/photos/1413412/pexels-photo-1413412.jpeg?auto=compress&cs=tinysrgb&w=800',
   price: 1000,
 });
+productList.push({
+  name: 'Compu',
+  image:
+    'https://images.pexels.com/photos/459653/pexels-photo-459653.jpeg?auto=compress&cs=tinysrgb&w=800',
+  price: 800,
+});
 
 function renderProducts(arr) {
   for (product of productList) {
@@ -58,7 +64,7 @@ function renderProducts(arr) {
     productImg.setAttribute('src', product.image);
 
     const productInfo = document.createElement('div');
-    productInfo.classList.add('product-info');
+    productInfo.classList.add('product-card-info');
 
     const productInfoDiv = document.createElement('div');
 
